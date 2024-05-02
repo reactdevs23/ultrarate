@@ -1,0 +1,251 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+
+  padding: 15px 0;
+}
+.wrapperBg {
+  background: var(--bg);
+  box-shadow: 0 0 3px var(--Border);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logoAndNavitems {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+.mobileLogo {
+  display: none;
+}
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-left: 24px;
+
+  width: 100%;
+  position: relative;
+}
+.navItems::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  background: var(--Border);
+  z-index: 1;
+}
+
+.navItem {
+  color: var(--Secondary);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 142.857%;
+  letter-spacing: -0.2px;
+}
+.navActive {
+  color: var(--Primary);
+}
+.inputContainer {
+  display: flex;
+  padding: 6px 12px 6px 16px;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 12px;
+  background: var(--Surface-soft);
+  max-width: 427px;
+  width: 100%;
+  margin-left: auto;
+}
+.input {
+  color: var(--Secondary);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+  letter-spacing: -0.2px;
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+.input::placeholder {
+  color: var(--Secondary);
+}
+.input:-moz-placeholder {
+  color: var(--Secondary);
+}
+.searchButton {
+  padding: 8px 10px;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.button {
+  font-size: 14px;
+  white-space: nowrap;
+}
+.shopButton {
+  padding: 12px;
+}
+.shop {
+  color: var(--Primary);
+  font-size: 22px;
+}
+.sunMoon {
+  display: flex;
+  align-items: center;
+
+  border-radius: 16px;
+  background: var(--Surface-soft);
+}
+.sun,
+.moon {
+  color: var(--Primary);
+  padding: 10px 12px;
+
+  font-size: 18px;
+  line-height: 100%;
+  cursor: pointer;
+}
+.sunIcon {
+  margin-top: 2px;
+}
+.activeTheme {
+  border-radius: 12px;
+  background: var(--Tabs);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.12),
+    0px 8px 20px 0px rgba(0, 0, 0, 0.02);
+}
+.tabSearchButton {
+  display: none;
+}
+.hamburger,
+.close {
+  display: none;
+}
+.connectWalletAndThemeToggler {
+  display: none;
+}
+@media only screen and (max-width: 1199px) {
+  .tabSearchButton {
+    display: flex;
+    padding: 12px;
+    margin-left: auto;
+    font-size: 18px;
+  }
+
+  .navItems {
+    border: none;
+    padding-left: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+    min-height: 100vh;
+    background: var(--bg);
+    transform: translateX(250%);
+    transition: 0.3s;
+    position: fixed;
+    top: 76px;
+    right: 0;
+    padding: 0 20px;
+    padding-top: 20px;
+    max-width: 320px;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .navItems::before {
+    display: none;
+  }
+  .sidebar {
+    transform: translateX(0);
+    right: 0;
+  }
+  .searchButton {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .hamburger,
+  .close {
+    color: var(--Primary);
+    font-size: 24px;
+    display: block;
+    cursor: pointer;
+  }
+  .inputContainer {
+    order: -1;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar {
+    gap: 12px;
+  }
+
+  .buttonContainer {
+    gap: 12px;
+  }
+  /* .logoAndNavitems {
+    width: auto;
+  }
+  .buttonContainer {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .shopButton {
+    margin-left: auto;
+  } */
+  .tabSearchButton {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .connectWalletAndThemeToggler {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .buttonContainer .button,
+  .buttonContainer .sunMoon {
+    display: none;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .dekstopLogo {
+    display: none;
+  }
+  .mobileLogo {
+    display: block;
+  }
+  .logoAndNavitems {
+    width: auto;
+  }
+  .tabSearchButton {
+    margin-right: auto;
+  }
+}

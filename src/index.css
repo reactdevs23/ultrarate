@@ -1,13 +1,126 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oswald:wght@200..700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter";
+}
+:root {
+}
+.darkTheme {
+  --Primary: #e8e8e8;
+  --Secondary: #cecece;
+  --ButtonSecondaryColor: #353535;
+  --Surface-soft: #202020;
+  --Surface-medium: #3c3c3c;
+  --Background-CTA: rgba(0, 0, 0, 0.4);
+  --bg: #171717;
+  --Tabs: #484848;
+  --Button: #1537ec;
+  --Button-secondary: #353535;
+  --Tertiary: #747474;
+  --Border: #454545;
+  --White-Surface: #272727;
+  --Blue-Surface: #09243c;
+}
+.lightTheme {
+  --Primary: #171717;
+  --Secondary: #353535;
+  --ButtonSecondaryColor: #e8e8e8;
+  --Surface-soft: #f5f5f5;
+  --Surface-medium: #2a2929;
+  --Background-CTA: rgba(255, 255, 255, 0.4);
+  --bg: #ffffff;
+  --Tabs: #e0e0e0;
+  --Button: #1537ec;
+  --Button-secondary: #2a2929;
+  --Tertiary: #2a2929;
+  --Border: #cecece;
+  --White-Surface: #ffffff;
+  --Blue-Surface: #cfe7ff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  padding: 0;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+.lightTheme,
+.darkTheme {
+  min-height: 100vh;
+}
+.lightTheme {
+  background: #fff;
+}
+.darkTheme {
+  background: #171717;
+}
+.mainPage {
+  padding-top: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+button,
+a {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover,
+a:hover {
+  opacity: 0.8;
+  transform: translateY(-3px);
+}
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  width: 90%;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-bg-dark);
+  border-radius: 4px;
+}
+.overflow {
+  scrollbar-width: thin;
+  scrollbar-color: var(--Primary) rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+}
+
+/* Chrome, Edge, and Safari browsers */
+.overflow::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 5px;
+}
+.overflow::-webkit-scrollbar-track {
+  background: rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+}
+
+.overflow::-webkit-scrollbar-thumb {
+  background: var(--Primary);
+  border-radius: 100vh;
+  border: none;
+  border-radius: 5px;
 }

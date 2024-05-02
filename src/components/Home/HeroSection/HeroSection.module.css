@@ -1,0 +1,210 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+.img {
+  width: 100%;
+  max-width: 515px;
+  border-radius: 16px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.verificationContainer,
+.ownedBy {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.owner {
+  text-decoration: underline;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 0;
+}
+.priceAndBuyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 16px;
+  background: var(--Surface-soft);
+}
+.priceContainer {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ethPrice {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+.currency {
+  text-transform: uppercase;
+  line-height: 100%;
+}
+.usdPrice {
+  font-size: 18px;
+  color: var(--Tertiary);
+}
+.buyContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.plusIcon {
+  font-size: 24px;
+}
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.viewColloection {
+  color: var(--Primary);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.2px;
+  text-decoration-line: underline;
+}
+.extraordinaryApe {
+  border-radius: 16px;
+  background: var(--Surface-soft);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.12),
+    0px 8px 20px 0px rgba(0, 0, 0, 0.02);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+.apeImgContainer {
+  max-width: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.apeImg {
+  width: 100%;
+}
+.extraordinaryApe .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.keyValueContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.keyValue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.elipes {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  width: 496px;
+  height: 496px;
+  border-radius: 300px;
+  background: var(
+    --Gradient-Background-1,
+    linear-gradient(
+      96deg,
+      rgba(31, 113, 235, 0.1) 1.53%,
+      rgba(225, 229, 19, 0.06) 50.32%,
+      rgba(20, 220, 88, 0.1) 99.12%
+    )
+  );
+  filter: blur(100px);
+}
+@media only screen and (max-width: 1199px) {
+  .container {
+    gap: 32px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .img {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    padding: 60px 0;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .ownedBy p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .buttonContainer {
+    gap: 6px;
+  }
+  .more {
+    max-width: 48px;
+    padding: 12px 6px;
+  }
+  .moreIcon {
+    transform: rotate(90deg);
+    font-size: 20px;
+  }
+  .buyContainer {
+    gap: 10px;
+  }
+  .plusIcon {
+    font-size: 20px;
+  }
+}

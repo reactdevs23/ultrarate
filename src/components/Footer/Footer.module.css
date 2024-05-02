@@ -1,0 +1,140 @@
+.wrapper {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.itemsContainer {
+  display: flex;
+  gap: 60px;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.link {
+  color: var(--Secondary);
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+  letter-spacing: -0.2px;
+}
+.middleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 0;
+  border-top: 1px solid var(--Border);
+  border-bottom: 1px solid var(--Border);
+}
+.joinNewsLetter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  width: 100%;
+}
+.input {
+  color: var(--Secondary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.2px;
+  padding: 8px 16px;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid var(--Surface-soft, #202020);
+  background: var(--Surface-soft, #202020);
+  width: 100%;
+  outline: none;
+  max-width: 318px;
+}
+.button {
+  font-size: 14px;
+}
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.tab,
+.copyRight {
+  color: var(--Tertiary);
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133.333%;
+}
+@media only screen and (max-width: 991px) {
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    padding: 60px 0;
+  }
+
+  .middleBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .inputWrapper {
+    justify-content: flex-start;
+  }
+  .bottomBar {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .topBar {
+    flex-direction: column;
+  }
+  .itemsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .inputWrapper {
+    width: 100%;
+    gap: 6px;
+  }
+  .input {
+    max-width: 100%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .button {
+    font-size: 14px;
+  }
+}

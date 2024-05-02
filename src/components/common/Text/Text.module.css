@@ -1,0 +1,34 @@
+.heading {
+  color: var(--Primary);
+  font-family: Inter;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+}
+.xs {
+  font-size: 14px;
+}
+.base {
+  font-size: 16px;
+}
+.medium {
+  font-size: 32px;
+}
+.xsMedium {
+  font-size: 20px;
+}
+.large {
+  font-size: 40px;
+}
+.primary {
+  color: var(--Primary);
+}
+.secondary {
+  color: var(--Secondary);
+}
+@media only screen and (max-width: 767px) {
+  .xsMedium {
+    font-size: 18px;
+  }
+}

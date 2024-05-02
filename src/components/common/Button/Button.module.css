@@ -1,0 +1,47 @@
+.button {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133.333%;
+  letter-spacing: -0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: var(--Button);
+  color: #fff;
+  cursor: pointer;
+}
+.secondary {
+  background: var(--Button-secondary);
+}
+.wFull {
+  width: 100%;
+}
+.icon {
+  color: #fff;
+}
+.surfaceSoft {
+  padding: 10px 16px;
+  background: var(--Surface-soft);
+  color: var(--Secondary);
+  font-size: 14px;
+}
+.surfaceMedium {
+  background: var(--Surface-medium);
+}
+.surfaceSoft.icon {
+  color: var(--Secondary);
+}
+
+@media only screen and (max-width: 520px) {
+  .button {
+    padding: 12px 12px;
+    font-size: 16px;
+  }
+  .surfaceSoft {
+    font-size: 14px;
+  }
+}

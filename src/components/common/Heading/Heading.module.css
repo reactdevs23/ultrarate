@@ -1,0 +1,32 @@
+.heading {
+  color: var(--Primary);
+  font-weight: 600;
+  font-style: normal;
+  line-height: 110%;
+  letter-spacing: -0.5px;
+}
+.base {
+  font-size: 16px;
+}
+.medium {
+  font-size: 32px;
+  letter-spacing: -1.5px;
+}
+.xsMedium {
+  font-size: 20px;
+}
+.large {
+  font-size: 40px;
+  letter-spacing: -1.5px;
+}
+.primary {
+  color: var(--Primary);
+}
+.secondary {
+  color: var(--Secondary);
+}
+@media only screen and (max-width: 767px) {
+  .large {
+    font-size: 32px;
+  }
+}
