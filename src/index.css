@@ -61,7 +61,11 @@ body {
 .mainPage {
   padding-top: 50px;
 }
-
+@media only screen and (max-width: 991px) {
+  .mainPage {
+    padding-top: 35px;
+  }
+}
 h1,
 h2,
 h3,
